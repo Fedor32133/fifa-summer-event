@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FIFA Summer Event - Календарь</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<style>
+/* Заменю существующие на: */
+@media (max-width: 1200px) {
+    .calendar__header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .challenges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .calendar {
+        padding: 120px 0 60px;
+    }
+    
+    .calendar__grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .challenges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calendar-day {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .calendar__grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 25px;
+    }
+}
+</style>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="images/fifa-logo.jpg" alt="FIFA Logo">
+                    <span>Summer Event 2024</span>
+                </div>
+                <nav class="nav">
+                    <a class="nav__link" href="index.html">Главная</a>
+                    <a class="nav__link" href="auth.html">Вход</a>
+                    <a class="nav__link active" href="calendar.html">Календарь</a>
+                </nav>
+                <button class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="calendar">
+            <div class="container">
+                <h2 class="section-title">Календарь ивента</h2>
+                <div class="calendar__header">
+                    <div class="calendar__progress">
+                        <div class="progress-bar">
+                            <div class="progress-bar__fill" id="progressFill"></div>
+                        </div>
+                        <span id="progressText">0/30 дней завершено</span>
+                    </div>
+                    <button class="btn btn--secondary" id="claimAll">Забрать все награды</button>
+                </div>
+
+                <div class="calendar__grid" id="calendarGrid">
+
+                </div>
+
+                <div class="weekly-challenges">
+                    <h3 class="weekly-challenges__title">Еженедельные задания</h3>
+                    <div class="challenges-grid">
+                        <div class="challenge-card">
+                            <h4>Неделя 1</h4>
+                            <ul>
+                                <li>Забейте 10 голов</li>
+                                <li>Оформите хет-трик</li>
+                                <li>Выиграйте 5 матчей</li>
+                            </ul>
+                            <button class="btn btn--small">Забрать награду</button>
+                        </div>
+                        <div class="challenge-card">
+                            <h4>Неделя 2</h4>
+                            <ul>
+                                <li>Сделайте 20 передач</li>
+                                <li>Выиграйте в режиме Ultimate Team</li>
+                                <li>Забейте ударом из-за пределов штрафной</li>
+                            </ul>
+                            <button class="btn btn--small" disabled>Доступно через 7 дней</button>
+                        </div>
+                        <div class="challenge-card">
+                            <h4>Неделя 3</h4>
+                            <ul>
+                                <li>Соберите команду из 11 игроков одной лиги</li>
+                                <li>Выиграйте 3 матча подряд</li>
+                                <li>Забейте головой</li>
+                            </ul>
+                            <button class="btn btn--small" disabled>Доступно через 14 дней</button>
+                        </div>
+                        <div class="challenge-card">
+                            <h4>Неделя 4</h4>
+                            <ul>
+                                <li>Заработайте чистый лист в 5 матчах</li>
+                                <li>Забейте 5 голов с пенальти</li>
+                                <li>Выиграйте в овертайме</li>
+                            </ul>
+                            <button class="btn btn--small" disabled>Доступно через 21 день</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <img src="images/fifa-summer.png" alt="FIFA Logo">
+                    <span>Summer Event 2024</span>
+                </div>
+                <div class="footer__links">
+                    <a href="#">Правила и условия</a>
+                    <a href="#">Поддержка</a>
+                    <a href="#">Официальный сайт FIFA</a>
+                </div>
+                <div class="footer__social">
+                     <a href="#"><img src="images/Rt.jpg" alt="Rutube"></a>
+                    <a href="#"><img src="images/Tg.jpg" alt="Telegram"></a>
+                    <a href="#"><img src="images/Vk.jpg" alt="Vk"></a>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <p>© 2024 FIFA Summer Event. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/calendar.js"></script>
+</body>
+</html>
