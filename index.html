@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FIFA Summer Event - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<style>
+/* Удалю старые медиа-запросы и заменю на: */
+@media (max-width: 1200px) {
+    .intro__title {
+        font-size: 2.5rem;
+    }
+    
+    .rewards__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .intro {
+        padding: 120px 0 60px;
+    }
+    
+    .about__content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .rewards__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header__logo span {
+        display: none;
+    }
+}
+
+@media (min-width: 2000px) {
+    .intro__image {
+        max-width: 800px;
+    }
+}
+</style>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="images/fifa-logo.jpg" alt="FIFA Logo">
+                    <span>Summer Event 2024</span>
+                </div>
+                <nav class="nav">
+                    <a class="nav__link active" href="index.html">Главная</a>
+                    <a class="nav__link" href="auth.html">Вх0д</a>
+                </nav>
+                <button class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <div class="intro__inner">
+                    <h1 class="intro__title animate-pop">Летний Ивент FIFA 24</h1>
+                    <h2 class="intro__subtitle animate-slide-up">30 дней эксклюзивных наград и заданий!</h2>
+                    <div class="intro__image animate-float">
+                        <img src="images/fifa-main.png" alt="FIFA Summer Event">
+                    </div>
+                    <a href="auth.html" class="btn btn--primary animate-pulse">Принять участие</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h2 class="section-title">Об ивенте</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>Присоединяйтесь к нашему эксклюзивному летнему ивенту в FIFA 24! В течение 30 дней вас ждут:</p>
+                        <ul>
+                            <li>Ежедневные награды</li>
+                            <li>Специальные еженедельные задания</li>
+                            <li>Уникальные карточки игроков</li>
+                            <li>Эксклюзивные предметы для клуба</li>
+                        </ul>
+                        <p>Не упустите шанс получить легендарных игроков и ул7чшить свою Ultimate Team!</p>
+                    </div>
+                    <div class="about__image">
+                        <img src="images/fifa-summer.png" alt="FIFA Rewards" class="animate-rotate">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rewards">
+            <div class="container">
+                <h2 class="section-title">Награды</h2>
+                <div class="rewards__grid">
+                    <div class="reward-card animate-slide-left">
+                        <div class="reward-card__image">
+                            <img src="images/player-card.png" alt="Player Card">
+                        </div>
+                        <h3 class="reward-card__title">Эксклюзивные карты игроков</h3>
+                        <p class="reward-card__desc">Получите специальные летние версии карт игроков с улучшенными характеристиками.</p>
+                    </div>
+                    <div class="reward-card animate-slide-up">
+                        <div class="reward-card__image">
+                            <img src="images/kit.png" alt="Kit">
+                        </div>
+                        <h3 class="reward-card__title">Комплекты формы</h3>
+                        <p class="reward-card__desc">Уникальные летние дизайны формы для вашего клуба.</p>
+                    </div>
+                    <div class="reward-card animate-slide-right">
+                        <div class="reward-card__image">
+                            <img src="images/coins.png" alt="Coins">
+                        </div>
+                        <h3 class="reward-card__title">Монеты и пакеты</h3>
+                        <p class="reward-card__desc">Зарабатывайте бонусные мон3ты и пакеты для улучшения вашей команды.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <img src="images/fifa-logo.jpg" alt="FIFA Logo">
+                    <span>Summer Event 2024</span>
+                </div>
+                <div class="footer__links">
+                    <a href="#">Правила и условия</a>
+                    <a href="#">Поддержка</a>
+                    <a href="#">Официальный сайт FIFA</a>
+                </div>
+                <div class="footer__social">
+                          <a href="#"><img src="images/Rt.jpg" alt="Rutube"></a>
+                    <a href="#"><img src="images/Tg.jpg" alt="Telegram"></a>
+                    <a href="#"><img src="images/Vk.jpg" alt="Vk"></a>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <p>© 2024 FIFA Summer Event. Все права защищены. Цифра 9 завершает секретный код.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
